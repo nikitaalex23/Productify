@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productify</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Typed.js (Typing Effect) -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle Button -->
+    <!-- <button id="toggle-theme">🌙 Dark Mode</button> -->
+
+    <!-- First Screen -->
+    <section id="hero">
+        <h1 class="title"><span id="typed-text"></span></h1>
+        <div class="arrow-circle">
+            <svg class="arrow" viewBox="0 0 24 24">
+                <path d="M12 19l-7-7 1.41-1.41L11 15.17V5h2v10.17l4.59-4.58L19 12z"/>
+            </svg>
+        </div>        
+    </section>
+
+    <div id="message-box" class="message" style="display: none;"></div>
+
+    <!-- Content Section -->
+    <section id="content">
+        <div class="container">
+            <!-- Left Container -->
+            <div class="box left-box">
+                <button id="choose-image">Choose an Image</button>
+                <input type="file" id="image-input" accept="image/*" hidden>
+                <div id="preview">
+                    <img id="preview-img" src="" alt="" hidden>
+                    <p id="file-name"></p>
+                </div>
+            </div>
+    
+            <!-- Right Container -->
+            <div class="box right-box">
+                <textarea id="description" placeholder="Enter your description..."></textarea>
+                <textarea id="generated-caption" placeholder="Generated caption will appear here..." readonly></textarea>
+            </div>
+        </div>
+    
+        <!-- Submit Button is now outside the container -->
+        <div class="submit-container">
+            <button id="submit">Generate</button>
+        </div>
+    </section>    
+
+    <script src="script.js"></script>
+</body>
+</html>
